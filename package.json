@@ -1,7 +1,6 @@
 {
   "name": "upstack-back",
   "module": "index.ts",
-  "type": "module",
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
     "@types/bun": "latest",
@@ -11,8 +10,9 @@
   },
   "scripts": {
     "dev": "bun run --watch src/index.ts",
-    "build": "tsc -b && bun run src/index.ts --api",
-    "start": "bun run src/index.ts"
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "clean": "rm -rf dist"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
